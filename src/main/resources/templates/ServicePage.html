@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Service Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link rel="stylesheet" href="./servicestyle.css">
+    
+    
+    <style>
+body, html {
+    height: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Amatic SC", sans-serif;
+}
+
+.menu {
+    display: none;
+}
+
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.container {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 38px;
+    filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+.banner-image {
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.255);
+}
+
+h1 {
+    font-family: 'Righteous', sans-serif;
+    color: rgba(255, 255, 255, 0.98);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+p {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 150%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.button-wrapper {
+    margin-top: 18px;
+}
+
+.btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn+.btn {
+    margin-left: 10px;
+}
+
+.outline {
+    background: transparent;
+    color: rgba(0, 212, 255, 0.9);
+    border: 1px solid rgba(0, 212, 255, 0.6);
+    transition: all .3s ease;
+}
+
+.outline:hover {
+    transform: scale(1.125);
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+    transition: all .3s ease;
+}
+
+.fill {
+    background: rgba(0, 212, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.fill:hover {
+    transform: scale(1.125);
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+    transition: all .3s ease;
+}
+.out {
+    background: rgba(0, 212, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+    transition: all .3s ease;
+    height: 60px;
+    width: 150px;
+}
+.out:hover {
+    transform: scale(1.125);
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+    transition: all .3s ease;
+    
+}
+</style>
+</head>
+
+<body>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-bottomleft w3-padding">
+            <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>
+        </div>
+        <div class="w3-display-middle w3-center">
+            <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
+        </div>
+    </header>
+
+    <!-- Menu Container -->
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+        <div class="w3-content">
+
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:20px">THE MENU</h1>
+
+            <br><br><br><br><br>
+            <div class="container">
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('../static/assets/electrician.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/cleaning.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/plumber.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('../static/assets/electrician.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/cleaning.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/plumber.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('../static/assets/electrician.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/cleaning.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/plumber.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('../static/assets/electrician.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/cleaning.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/plumber.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('../static/assets/electrician.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/cleaning.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/plumber.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('../static/assets/electrician.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/cleaning.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="banner-image" style="background-image: url('./../assets/plumber.jpg');"></div>
+                    <br>
+                    <div class="button-wrapper">
+                        <button class="btn outline">DETAILS</button>
+                        <button class="btn fill">BOOK NOW</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="btn out" style="margin-left: 45%; margin-top: 10%;"><a href="./Booking.html">BOOK NOW</a></button>
+    </div>
+
+    
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+        <p>Powered by Tech Mahindra</p>
+    </footer>
+
+</body>
+
+</html>
