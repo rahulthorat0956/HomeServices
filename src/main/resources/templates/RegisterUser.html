@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,18 +61,18 @@ button:hover {
 <body>
     <div class="register-container">
         <h2>User Registration</h2>
-        <form action="your_server_side_registration_script.php" method="post">
+        <form th:action="@{/register}" th:object="${UserInfo}" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name"  th:field="*{username}" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email"  th:field="*{usermail}" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password"  th:field="*{userpassword}" required>
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirm Password:</label>
