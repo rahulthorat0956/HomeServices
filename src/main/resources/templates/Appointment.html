@@ -62,7 +62,11 @@
 
     <form action="/saveAppointment" method="post" th:object="${Appointment}">
         <label for="userId">User ID:</label>
+<<<<<<< HEAD
         <input type="text" id="userId" name="user" th:value="${loggedInUserId}" readonly>
+=======
+		<input type="text" id="userId" name="user"  required >
+>>>>>>> 36e0407 (first commit)
 
         <label for="serviceId">Service ID:</label>
         <input type="text" id="serviceId" name="service"   required>
