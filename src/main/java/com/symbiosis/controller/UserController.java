@@ -1,15 +1,15 @@
 package com.symbiosis.controller;
 
 import java.util.List;
-
-<<<<<<< HEAD
+//
+//<<<<<<< HEAD
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 
-=======
->>>>>>> 36e0407 (first commit)
+//=======
+//>>>>>>> 36e0407 (first commit)
 import javax.security.sasl.AuthenticationException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -115,46 +115,46 @@ public class UserController {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	@PostMapping("/login")
-	public String login(@ModelAttribute UserInfo userInfo, Model model) {
-	    UserInfo user = userRepo.findByUsernameAndUserpassword(userInfo.getUsername(), userInfo.getUserpassword());
-
-	    if (user != null) {
-	        // Successful login
-	        return "redirect:/ServicePage.html";
-	    } else {
-	        // Failed login
-	        model.addAttribute("error", "Invalid username or password");
-	        return "UserLogin.html";
-	    }
-	}
-	
-	@Autowired
-	AdminRepository adminRepo;
-	
-	
-	@PostMapping("/admin")
-	public String Admin(@ModelAttribute Admin admin, Model model) {
-	    Admin adminlog = adminRepo.findByAdminemailAndAdminpassword( admin.getAdminemail(),admin.getAdminpassword());
-
-	    if (adminlog != null) {
-	        // Successful login
-	        return "redirect:/AdminPage.html";
-	    } else {
-	        // Failed login
-	        model.addAttribute("error", "Invalid username or password");
-	        return "AdminLogin.html";
-	    }
-	}
-	
-	
+//
+//
+//
+//
+//
+//
+//
+//	@PostMapping("/login")
+//	public String login(@ModelAttribute UserInfo userInfo, Model model) {
+//	    UserInfo user = userRepo.findByUsernameAndUserpassword(userInfo.getUsername(), userInfo.getUserpassword());
+//
+//	    if (user != null) {
+//	        // Successful login
+//	        return "redirect:/ServicePage.html";
+//	    } else {
+//	        // Failed login
+//	        model.addAttribute("error", "Invalid username or password");
+//	        return "UserLogin.html";
+//	    }
+//	}
+//
+//	@Autowired
+//	AdminRepository adminRepo;
+//
+//
+//	@PostMapping("/admin")
+//	public String Admin(@ModelAttribute Admin admin, Model model) {
+//	    Admin adminlog = adminRepo.findByAdminemailAndAdminpassword( admin.getAdminemail(),admin.getAdminpassword());
+//
+//	    if (adminlog != null) {
+//	        // Successful login
+//	        return "redirect:/AdminPage.html";
+//	    } else {
+//	        // Failed login
+//	        model.addAttribute("error", "Invalid username or password");
+//	        return "AdminLogin.html";
+//	    }
+//	}
+//
+//
 	
 	
 	
@@ -202,16 +202,16 @@ public class UserController {
 	@GetMapping("/Appointment.html")
    public String showAppointmentForm(Model model) {
 		
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		 // Get the logged-in user's ID
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String loggedInUserId = authentication.getName(); // Assuming the username is the user's ID
 
         // Pass the user ID to the appointment form
         model.addAttribute("loggedInUserId", loggedInUserId);
-=======
-		
->>>>>>> 36e0407 (first commit)
+//=======
+
+//>>>>>>> 36e0407 (first commit)
         
         model.addAttribute("Appointment", new Appointment());
         return "Appointment";
